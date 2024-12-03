@@ -1,0 +1,331 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: flex-start;
+}
+
+.sidebar {
+    background-color:rgb(34, 148, 201);
+    width: 260px;
+    height: 100hv ;
+    padding: 20px;
+}
+
+.profile-pic{
+  width: 100px;
+  height: 100px; 
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgb(241, 236, 236);
+  flex-shrink: 0;
+  align-items: center;
+}
+.profile-pic img{
+    width: 100%;
+}
+ul{
+    list-style: none;
+}
+ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    transition: .5s;
+    color: #f8fbfc;
+
+}
+ul li a:hover{
+    background-color: #6db2dd;
+}
+
+
+.main-content {
+    flex: 1;
+    padding: 50px;
+    background-color: white;
+    color: #333;
+}
+
+#about .header h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+    margin: 5px 0;
+    color: #0d43a7;
+
+}
+.main-content .header {
+    display: flex;
+}
+
+#about .info {
+    margin: 10px 0;
+    color: #6b6a6a;
+}
+
+#about .info .info2 {
+    color: #5b80c4;
+}
+
+.social-icons {
+    display: flex;
+    justify-content:left;
+    gap: 15px;
+    margin-top: 70px;
+}
+
+.social-icons i {
+    font-size: 40px;
+    color: #333;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.social-icons i:hover {
+    color: #007bff; 
+}
+
+.content {
+    display: none;
+}
+
+
+.content:target {
+    display: block;
+}
+
+
+#about {
+    display: none;
+}
+
+#about:target {
+    display: block;
+}
+
+.content .firstExp .headExp h3,
+.content .secondExp .headExp h3 {
+    text-transform: uppercase;
+    padding: 6px;
+}
+
+.content .firstExp .headExp .edu,
+.content .secondExp .headExp .edu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content .firstExp .headExp .edu h5,
+.content .secondExp .headExp .edu h5 {
+    color: #0d43a7;
+    margin: 5px;
+}
+
+.content .firstExp .headExp .edu h4,
+.content .secondExp .headExp .edu h4 {
+    color: dimgray;
+    text-transform: uppercase;
+}
+
+.content .firstExp p,
+.content .secondExp p {
+    color: dimgray;
+}
+.content .firstEdu .headEdu h3,
+.content .secondEdu .headEdu h3 {
+    text-transform: uppercase;
+    padding: 6px;
+}
+
+.content .firstEdu .headEdu .edu,
+.content .secondEdu .headEdu .edu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content .firstEdu .headEdu .edu h5,
+.content .secondEdu .headEdu .edu h5 {
+    color: #0d43a7;
+    margin: 5px;
+}
+
+.content .firstEdu .headEdu .edu h4,
+.content .secondEdu .headEdu .edu h4 {
+    color: dimgray;
+    text-transform: uppercase;
+}
+
+.content .firstEdu p,
+.content .secondEdu p {
+    color: dimgray;
+}
+
+.content .skills h3 {
+    text-transform: uppercase;
+    color: dimgray;
+    margin: 8px;
+    padding: 10px;
+}
+
+.skills-icons {
+    display: flex;
+    justify-content:left;
+    gap: 15px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.skills-icons i {
+    font-size: 30px;
+    color: #333;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.skills-icons i:hover {
+    color: #007bff; 
+}
+
+
+.content .workflow-list {
+    color: #524d4d;
+    margin: 8px;
+    padding: 10px;
+}
+
+.content .workflow-list h3 {
+    margin: 8px;
+    padding: 10px;
+    text-align: left;
+}
+
+.content .workflow-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.content .workflow-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+.content .workflow-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #524d4d;
+}
+
+#interests p {
+    color: #524d4d;
+}
+
+.awards {
+    display: none;
+}
+
+
+.awards:target {
+    display: block;
+}
+
+#awards {
+    padding: 20px;
+}
+
+.awards-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.awards-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #524d4d;
+}
+
+.awards-list i {
+    color: goldenrod;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .skills-icons i {
+        font-size: 18px; 
+    }
+}
+
+
+h1, h2, h3 {
+    font-family: 'Arial', sans-serif;
+    color: #141414;
+}
+
+.sidebar-menu li {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.sidebar-menu a:hover {
+    color: #5b80c4;
+    color: #fff;
+}
+form {
+    max-width: 600px;
+    margin: auto;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #6686ed;
+    border-radius: 5px;
+}
+
+form button {
+    color: #5b80c4;
+    color: #416fc4;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    color: #0d43a7;
+}
+
+
+    

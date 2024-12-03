@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+        <ul>
+            <li class="pro">
+                <div class="profile-pic">
+                <img src="https://thumbs.dreamstime.com/b/vector-plano-del-estilo-del-avatar-del-web-del-icono-de-la-cara-del-retrato-de-la-mujer-85865881.jpg" alt="Profile Picture">
+             </div>
+            </li>
+                <li><a href="#" onclick="showSection('about')">About</a></li>
+                <li><a href="#"  onclick="showSection('experience')">Experience</a></li>
+                <li><a href="#" onclick="showSection('education')">Education</a></li>
+                <li><a href="#" onclick="showSection('skills')">Skills</a></li>
+                <li><a href="#"  onclick="showSection('interests')">Interests</a></li>
+                <li><a href="#"  onclick="showSection('awards')">Awards</a></li>
+                <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="main-content">
+            <div class="content" id="about">
+                <div class="header">
+                    <h1 class="head1">Maysam Hammad</h1>
+                </div>
+                <div class="info">
+                    <p class="info1">Bethlehem . Palestine . (+972) 598-769-2032</p>
+                    <p class="info2">maysam@gmail.com</p>
+                </div>
+                <p>
+                    I am experienced in crafting web applications to deliver advanced user-centric solutions.
+                </p>
+                <div class="social-icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-linkedin"></i>
+                    <i class="fab fa-github"></i>
+                </div>
+                
+            </div>
+
+            <div class="content" id="experience" style="display:none;">
+                <h2>EXPERIENCE</h2>
+                <div class="firstExp">
+                    <div class="headExp">
+                        <h3>JAVA DEVELOPER</h3>
+                        <div class="edu">
+                            <h4>FREELANCE PROJECTS </h4>
+                            <h5>November 2023 - Present</h5>
+                        </div>
+                    </div>
+                    <p>Developed and managed projects </p>
+                </div>
+                <p><br></p>
+                <div class="secondExp">
+                    <div class="headExp">
+                        <h3>WEB DEVELOPER</h3>
+                        <div class="edu">
+                            <h4>FREELANCE PROJECTS </h4>
+                            <h5>June 2020 - November 2023</h5>
+                        </div>
+                    </div>
+                    <p>Designed and deployed user-focused web applications, while maintaining modern standards and performance optimization.</p>
+                </div>
+            </div>
+
+            <div class="content" id="education" style="display:none;">
+                <h2>EDUCATION</h2>
+                <div class="firstEdu">
+                    <div class="headEdu">
+                        <h3>BETHLEHEM UNIVERSITY</h3>
+                        <div class="edu">
+                            <h4>SOFTWARE ENGINEERING</h4>
+                            <h5>August 2022 - Present</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content" id="skills" style="display:none;">
+                <h2>Skills</h2>
+                <h3>Programming Languages & Tools</h3>
+                <div class="skills-icons">
+                    <i class="fab fa-html5"></i>
+                    <i class="fab fa-css3-alt"></i>
+                    <i class="fab fa-js"></i>
+                    <i class="fab fa-sass"></i>
+                    <i class="fab fa-bootstrap"></i>
+                </div>
+                <h3>WORK FLOW</h3>
+                <ul class="workflow-list">
+                    <li>Mobile-First, Responsive Design</li>
+                    <li>Cross Browser Testing & Debugging</li>
+                </ul>
+            </div>
+
+            <div class="content" id="interests" style="display:none;">
+                <h2>INTERESTS</h2>
+                <p>Beyond my work in software development. I enjoy sharpening my problem-solving skills and when I’m 
+                    not immersed in tech, I find inspiration in reading thought-provoking books .</p>
+            </div>
+
+            <div class="content" id="awards" style="display:none;">
+                <h2>Awards & Certifications</h2>
+                <ul class="awards-list">
+                    <li><i class="fas fa-trophy"></i>Google Analytics Certified Developer</li>
+                    <li><i class="fas fa-trophy"></i>Mobile Web Specialist - Google Certification</li>
+                </ul>
+            </div>
+
+            <div class="content" id="contact" style="display:none;">
+                <h2>Contact</h2>
+                <form action="your-server-endpoint" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.content');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            // Show the clicked section
+            const activeSection = document.getElementById(sectionId);
+            activeSection.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
